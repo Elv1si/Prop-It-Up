@@ -1,5 +1,5 @@
 import PersonCard from "./components/PersonCard";
-home=PersonCard
+import PetCard from "./components/Pet";
 const peopleArr = [
   {
     firstName: "Jane",
@@ -19,9 +19,10 @@ function App() {
   return (
     <div className="App">
       {peopleArr.map((personObj, index) => (
-        <PersonCard
+        <PetCard
           key={index}
-          obj={personObj}
+          firstName={personObj.firstName}
+          lastName={personObj.lastName}
         />
       ))}
       
